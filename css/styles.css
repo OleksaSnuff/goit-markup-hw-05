@@ -403,7 +403,7 @@ ul {
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.02em;
 }
 .footer-social-list {
   display: flex;
@@ -447,7 +447,7 @@ ul {
   padding-left: 16px;
   color: #fff;
   font-size: 12px;
-  line-height: 2;
+  line-height: 1.5;
   letter-spacing: 0.04em;
 }
 .footer-modal-icon {
@@ -466,7 +466,7 @@ ul {
   justify-content: center;
   align-items: center;
   color: #fff;
-  font-family: Roboto;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -608,7 +608,7 @@ ul {
   margin-top: 16px;
 }
 .modal-last-wrap {
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 .modal-privacy-link {
   color: #4d5ae5;
@@ -628,7 +628,7 @@ ul {
   fill: transparent;
   margin-right: 8px;
 }
-.modal-checkbox:checked + .modal-privacy-span {
+.modal-checkbox:checked + .modal-privacy-text .modal-privacy-span {
   background-color: #404bbf;
   border: none;
   fill: #000000;
@@ -642,6 +642,7 @@ ul {
   min-width: 169px;
   height: 56px;
   border-color: transparent;
+  border: none;
   cursor: pointer;
   color: #fff;
   font-weight: 500;
