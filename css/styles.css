@@ -430,6 +430,8 @@ ul {
   fill: #f4f4fd;
 }
 .footer-form {
+  display: flex;
+  gap: 24px;
 }
 .footer-modal-header {
   margin-bottom: 16px;
@@ -438,7 +440,7 @@ ul {
   background-color: transparent;
   border-radius: 4px;
   border: 1px solid #fff;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   width: 264px;
   height: 40px;
   outline: transparent;
@@ -448,20 +450,32 @@ ul {
   line-height: 2;
   letter-spacing: 0.04em;
 }
+.footer-modal-icon {
+  fill: #ffffff;
+}
+.footer-modal-input::placeholder {
+  color: #fff;
+}
 .footer-modal-btn {
+  display: flex;
   border-radius: 4px;
   background-color: #4d5ae5;
-  width: 165px;
+  min-width: 165px;
   height: 40px;
   border: none;
-  position: relative;
-  padding: 0 24px;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  cursor: pointer;
 }
 .footer-modal-icon {
   margin-left: 16px;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
 }
 /*==========================Modal====================*/
 .backdrop {
@@ -474,17 +488,22 @@ ul {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal {
   position: absolute;
   width: 408px;
-  height: 584px;
+  min-height: 584px;
   background-color: #fcfcfc;
   border-radius: 4px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 24px;
+  padding: 72px 24px 24px 24px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-btn {
   padding: 0;
@@ -496,10 +515,26 @@ ul {
   position: absolute;
   top: 24px;
   right: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-btn:hover,
+.modal-btn:focus {
+  border: none;
+  background-color: #404bbf;
 }
 .modal-btn-icon {
   fill: #2e2f42;
   stroke: #2e2f42;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-btn:hover .modal-btn-icon,
+.modal-btn:focus .modal-btn-icon {
+  fill: #ffffff;
 }
 .modal-header {
   text-align: center;
@@ -508,8 +543,7 @@ ul {
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
-  letter-spacing: 0.03em;
-  margin-top: 48px;
+  letter-spacing: 0.02em;
   margin-bottom: 16px;
 }
 .modal-field {
@@ -518,8 +552,10 @@ ul {
 .modal-label {
   color: #8e8f99;
   font-size: 12px;
-  line-height: 1.16;
-  letter-spacing: 0.03em;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  display: block;
+  margin-bottom: 4px;
 }
 .modal-input {
   width: 100%;
@@ -529,6 +565,7 @@ ul {
   background-color: transparent;
   padding-left: 38px;
   outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-input:hover,
 .modal-input:focus {
@@ -547,7 +584,9 @@ ul {
   top: 50%;
   transform: translateY(-50%);
   fill: #2e2f42;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .modal-textarea {
   height: 120px;
   padding: 8px 16px;
