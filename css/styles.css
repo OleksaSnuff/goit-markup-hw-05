@@ -610,6 +610,9 @@ ul {
 .modal-last-wrap {
   margin-bottom: 16px;
 }
+.modal-field-privacy {
+  margin-bottom: 24px;
+}
 .modal-privacy-link {
   color: #4d5ae5;
   text-decoration: underline;
@@ -628,7 +631,7 @@ ul {
   fill: transparent;
   margin-right: 8px;
 }
-.modal-checkbox:checked + .modal-privacy-text .modal-privacy-span {
+.modal-checkbox:checked + .modal-privacy-text span {
   background-color: #404bbf;
   border: none;
   fill: #000000;
