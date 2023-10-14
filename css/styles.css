@@ -631,7 +631,7 @@ ul {
   fill: transparent;
   margin-right: 8px;
 }
-.modal-checkbox:checked + .modal-privacy-text span {
+.modal-checkbox:checked + .modal-privacy-text > .modal-privacy-span {
   background-color: #404bbf;
   border: none;
   fill: #000000;
