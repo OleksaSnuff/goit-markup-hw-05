@@ -634,7 +634,7 @@ ul {
 .modal-checkbox:checked + .modal-privacy-text > .modal-privacy-span {
   background-color: #404bbf;
   border: none;
-  fill: #000000;
+  fill: #4f4f4d;
 }
 .modal-button {
   display: block;
