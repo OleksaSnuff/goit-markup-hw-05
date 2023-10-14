@@ -530,19 +530,29 @@
             </div>
           </div>
           <div class="modal-field">
-            <label for="modal-text" class="modal-label">Comment</label>
+            <label for="user-comment" class="modal-label">Comment</label>
             <textarea
-              name="modal-text"
-              id="modal-text"
+              name="user-comment"
+              id="user-comment"
               class="modal-textarea modal-input"
               placeholder="Text input"
             ></textarea>
           </div>
-          <div class="modal-field">
-            <input type="checkbox" name="modal-check" id="modal-check" />
-            <label for="modal-check" class="modal-privacy-text"
+          <div class="modal-field modal-last-wrap">
+            <input
+              type="checkbox"
+              name="user-privacy"
+              id="user-privacy"
+              value="true"
+              class="modal-checkbox visually-hidden"
+            />
+            <label for="user-privacy" class="modal-privacy-text">
+              <span class="modal-privacy-span">
+                <svg class="modal-privacy-icon" width="10" height="8">
+                  <use href="./images/icons.svg#icon-vector"></use>
+                </svg> </span
               >I accept the terms and conditions of the
-              <a href="">Privacy Policy</a></label
+              <a href="" class="modal-privacy-link">Privacy Policy</a></label
             >
           </div>
           <button type="submit" class="modal-button">Send</button>
